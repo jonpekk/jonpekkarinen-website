@@ -8,7 +8,7 @@ export const Route = createFileRoute('/')({
 function HomePage() {
   return (
     <MetaHead
-      title="Home Page"
+      title="Home Page!"
       description="This is the description"
     >
       <div className="flex">
