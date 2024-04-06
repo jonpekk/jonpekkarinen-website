@@ -40,7 +40,6 @@ function HomePage() {
           <p>{data.Hero.subHeading}</p>
         </div>
         <div>
-          Image here
         </div>
       </div>
     </MetaHead>
