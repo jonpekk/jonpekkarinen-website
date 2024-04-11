@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# env file
+.env
+
+#proxy information
+localhost-key.pem
+localhost.pem

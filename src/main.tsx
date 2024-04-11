@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import './output.css'
 import { routeTree } from './routeTree.gen'
+import { storyblokInit, apiPlugin } from '@storyblok/react'
+import SplitComponent from './components/SplitComponent/SplitComponent'
+
 
 // Create a new router instance
 const router = createRouter({ routeTree })
@@ -13,6 +16,18 @@ declare module '@tanstack/react-router' {
     router: typeof router
   }
 }
+
+// Initialize storyblok
+storyblokInit({
+  accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
+  use: [apiPlugin],
+  components: {
+    splitComponent: SplitComponent
+  },
+  apiOptions: {
+    region: 'us'
+  }
+})
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

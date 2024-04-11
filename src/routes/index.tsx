@@ -1,19 +1,24 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { getStoryblokApi, StoryblokComponent } from "@storyblok/react/rsc";
 import MetaHead from '../components/MetaHead'
+import { PageStoryblok } from '@/component-types-sb'
+
 
 async function getHomePage() {
   try {
-    const response = await fetch('public/data/homePage.json')
-    if (!response.ok) {
-      throw new Error(response.statusText)
+    const storyblokApi = getStoryblokApi()
+    const homePageParams = {
+      version: import.meta.env.VITE_STORYBLOK_RENDER_TYPE as "published" | "draft" | undefined,
     }
+    const homePage = await storyblokApi.get("cdn/stories/home", homePageParams)
+    const homePageData: PageStoryblok | undefined = homePage?.data?.story?.content
 
-    const json = await response.json()
+    const homePageContent = homePageData?.body || []
 
-    return json
+    return homePageContent
   } catch (err) {
     console.warn(err)
-    return {}
+    return null
   }
 }
 
@@ -25,19 +30,17 @@ export const Route = createFileRoute('/')({
 function HomePage() {
   const data = Route.useLoaderData()
 
-  // Next step, convert hero into its own, reusable split component.
-  // Everything from here on should be built with the intention of putting a CMS behind it.
-  // Should I just use next? Not sure. This is probably some good practice with more complex loaders.
-
-  return data.Hero?.heading && (
+  return data && (
     <MetaHead
       title="Home Page!"
       description="This is the description"
     >
       <div className="flex">
         <div>
-          <h1>{data.Hero.heading}</h1>
-          <p>{data.Hero.subHeading}</p>
+          <h1>Jon Pekkarinen</h1>
+          {data.map(blok => (
+            <StoryblokComponent blok={blok} key={blok._uid} />
+          ))}
         </div>
         <div>
         </div>
