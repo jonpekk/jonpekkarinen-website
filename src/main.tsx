@@ -5,6 +5,7 @@ import './output.css'
 import { routeTree } from './routeTree.gen'
 import { storyblokInit, apiPlugin } from '@storyblok/react'
 import SplitComponent from './components/SplitComponent/SplitComponent'
+import PageTitle from './components/PageTitle/PageTitle'
 
 
 // Create a new router instance
@@ -22,7 +23,8 @@ storyblokInit({
   accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
-    splitComponent: SplitComponent
+    splitComponent: SplitComponent,
+    pageTitle: PageTitle
   },
   apiOptions: {
     region: 'us'

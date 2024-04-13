@@ -55,6 +55,33 @@
       "component_group_name": "PageTemplates"
     },
     {
+      "name": "pageTitle",
+      "display_name": null,
+      "created_at": "2024-04-11T12:28:31.341Z",
+      "updated_at": "2024-04-11T12:28:57.183Z",
+      "id": 155054,
+      "schema": {
+        "title": {
+          "type": "text",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "pageTitle",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
       "name": "splitComponent",
       "display_name": null,
       "created_at": "2024-04-10T12:11:08.847Z",

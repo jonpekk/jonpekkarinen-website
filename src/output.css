@@ -569,3 +569,208 @@ video {
 .flex {
   display: flex;
 }
+
+.font-outfit {
+  font-family: outfit;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.h1-style {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 1024px) {
+  .h1-style {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.h2-style {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 1024px) {
+  .h2-style {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.h3-style {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 1024px) {
+  .h3-style {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.h4-style {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 1024px) {
+  .h4-style {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.h5-style {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 1024px) {
+  .h5-style {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.h6-style {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 1024px) {
+  .h6-style {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 100;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 200;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 300;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  font-display: swap;
+
+  src: url("/fonts/Outfit-Black.ttf") format("truetype");
+}
+
+html,
+* {
+  font-family: outfit;
+}
