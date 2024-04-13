@@ -2,7 +2,10 @@ import { createFileRoute } from '@tanstack/react-router'
 import { getStoryblokApi, StoryblokComponent } from "@storyblok/react/rsc";
 import MetaHead from '../components/MetaHead'
 import { PageStoryblok } from '@/component-types-sb'
+import Heading from '../components/Heading/Heading';
 
+// Design inspo - https://dribbble.com/shots/23114007-Photo-Centric-Personal-Blog-Landing-Page
+// Another possibility - https://timmyomahony.com/
 
 async function getHomePage() {
   try {
@@ -38,6 +41,7 @@ function HomePage() {
       <div className="flex">
         <div>
           <h1>Jon Pekkarinen</h1>
+          <Heading style="h1" tag="h2">Need to fix storybook's font's next time im working on this</Heading>
           {data.map(blok => (
             <StoryblokComponent blok={blok} key={blok._uid} />
           ))}

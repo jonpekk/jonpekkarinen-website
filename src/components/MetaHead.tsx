@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 type MetaHeadProps = {
   title: string,
   description: string,
-  children: React.ReactElement
+  children: React.ReactElement | React.ReactElement[]
 }
 
 function MetaHead({ title, description, children }: MetaHeadProps) {

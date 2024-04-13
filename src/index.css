@@ -1,3 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/fonts/Outfit-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/fonts/Outfit-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Outfit-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Outfit-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Outfit-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Outfit-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/Outfit-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "outfit";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/Outfit-Black.ttf") format("truetype");
+}
+
+html {
+  @apply font-outfit
+}
+
+
+@layer utilities {
+  .h1-style {
+    @apply text-3xl lg:text-4xl font-bold tracking-wide;
+  }
+
+  .h2-style {
+    @apply text-2xl lg:text-3xl font-semibold tracking-wide;
+  }
+
+  .h3-style {
+    @apply text-xl lg:text-2xl font-semibold tracking-wide;
+  }
+
+  .h4-style {
+    @apply text-lg lg:text-xl font-semibold tracking-wide;
+  }
+
+  .h5-style {
+    @apply text-base lg:text-lg font-semibold tracking-wide;
+  }
+
+  .h6-style {
+    @apply text-sm lg:text-base font-semibold tracking-wide;
+  }
+}

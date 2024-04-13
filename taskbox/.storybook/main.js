@@ -1,7 +1,7 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   stories: ['../../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
-  staticDirs: ["../public"],
+  staticDirs: ["../public", { from: "../public/fonts", to: "/fonts" }],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -11,6 +11,7 @@ const config = {
     name: "@storybook/react-vite",
     options: {},
   },
+
   docs: {
     autodocs: "button",
   },
