@@ -79,28 +79,28 @@ html {
 }
 
 main {
-  @apply max-w-screen-lg mx-auto px-2 md:px-6 lg:px-8 xl:px0 2xl:px-0 mt-6 md:mt-10 lg:mt-12;
+  @apply max-w-screen-lg mx-auto px-2 md:px-6 lg:px-8 xl:px-0 2xl:px-0 mt-6 md:mt-10 lg:mt-12;
 }
 
 @layer utilities {
   .h1-style {
-    @apply text-3xl lg:text-4xl font-extralight tracking-wide;
+    @apply text-4xl lg:text-6xl font-extralight tracking-wide;
   }
 
   .h2-style {
-    @apply text-2xl lg:text-3xl font-light tracking-wide;
+    @apply text-3xl lg:text-5xl font-light tracking-wide;
   }
 
   .h3-style {
-    @apply text-xl lg:text-2xl font-light tracking-wide;
+    @apply text-2xl lg:text-4xl font-light tracking-wide;
   }
 
   .h4-style {
-    @apply text-lg lg:text-xl font-light tracking-wide;
+    @apply text-lg lg:text-3xl font-light tracking-wide;
   }
 
   .h5-style {
-    @apply text-base lg:text-lg font-light tracking-wide;
+    @apply text-base lg:text-2xl font-light tracking-wide;
   }
 
   .h6-style {
