@@ -10,7 +10,7 @@ function Navigation() {
           className="px-3 py-6 md:px-0 md:py-0 flex justify-between peer relative"
         >
           <div>
-            <a href='/' className="h4-style">Jon Pekkarinen</a>
+            <a href='/' className="h5-style">Jon Pekkarinen</a>
           </div>
           <div className="group md:hidden">
             <input type="checkbox" id="main-nav-toggle" className="hidden" />

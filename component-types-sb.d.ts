@@ -1,14 +1,8 @@
 import {StoryblokStory} from 'storyblok-generate-ts'
 
 export interface GridStoryblok {
-  columns?: (
-    | GridStoryblok
-    | ImageStoryblok
-    | PageStoryblok
-    | PageTitleStoryblok
-    | RichTextStoryblok
-    | SplitComponentStoryblok
-  )[];
+  columns?: (GridStoryblok | ImageStoryblok | PageStoryblok | PageTitleStoryblok | RichTextStoryblok)[];
+  align?: "" | "items-start" | "items-end" | "items-center" | "items-baseline" | "items-stretch";
   _uid: string;
   component: "grid";
   [k: string]: any;
@@ -40,14 +34,7 @@ export interface ImageStoryblok {
 }
 
 export interface PageStoryblok {
-  body?: (
-    | GridStoryblok
-    | ImageStoryblok
-    | PageStoryblok
-    | PageTitleStoryblok
-    | RichTextStoryblok
-    | SplitComponentStoryblok
-  )[];
+  body?: (GridStoryblok | ImageStoryblok | PageStoryblok | PageTitleStoryblok | RichTextStoryblok)[];
   _uid: string;
   component: "page";
   uuid?: string;
@@ -74,14 +61,5 @@ export interface RichTextStoryblok {
   doc: RichtextStoryblok;
   _uid: string;
   component: "richText";
-  [k: string]: any;
-}
-
-export interface SplitComponentStoryblok {
-  splitComponentText: RichtextStoryblok;
-  splitComponentImage: AssetStoryblok;
-  imageOnLeft?: boolean;
-  _uid: string;
-  component: "splitComponent";
   [k: string]: any;
 }

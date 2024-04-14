@@ -9,7 +9,7 @@ function SbImage({ blok }: TImageProps) {
     <img
       src={blok.asset.filename}
       alt={blok.asset.alt || ""}
-      className="w-full h-full object-contain rounded"
+      className="w-full object-contain rounded"
     />
   )
 }
