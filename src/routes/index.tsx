@@ -1,8 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { getStoryblokApi, StoryblokComponent } from "@storyblok/react/rsc";
+import { getStoryblokApi, StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
 import MetaHead from '../components/MetaHead'
 import { PageStoryblok } from '@/component-types-sb'
-import Heading from '../components/Heading/Heading';
 
 // Design inspo - https://dribbble.com/shots/23114007-Photo-Centric-Personal-Blog-Landing-Page
 // Another possibility - https://timmyomahony.com/
@@ -35,15 +34,15 @@ function HomePage() {
 
   return data && (
     <MetaHead
-      title="Home Page!"
-      description="This is the description"
+      title="Jon Pekkarinen - Welcome!"
+      description="I am a full stack developer out of Boston with a passion for code and movies"
     >
       <div className="flex">
         <div>
-          <h1>Jon Pekkarinen</h1>
-          <Heading style="h1" tag="h2">Need to fix storybook's font's next time im working on this</Heading>
           {data.map(blok => (
-            <StoryblokComponent blok={blok} key={blok._uid} />
+            <div key={blok._uid} className="pb-6 md:pb-12 lg:pb-16" {...storyblokEditable(blok)}>
+              <StoryblokComponent blok={blok} />
+            </div>
           ))}
         </div>
         <div>
