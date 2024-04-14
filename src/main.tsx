@@ -9,6 +9,7 @@ import StoryblokRichText from './components/StoryblokRichText/StoryblokRichText'
 import SbImage from './components/Image/SbImage'
 import SbGrid from './components/Grid/SbGrid'
 import Divider from './components/Divider/Divider'
+import SbTwoThirdsSplit from './components/TwoThirdsSplit/SbTwoThirdsSplit'
 
 
 // Create a new router instance
@@ -30,7 +31,8 @@ storyblokInit({
     richText: StoryblokRichText,
     image: SbImage,
     grid: SbGrid,
-    divider: Divider
+    divider: Divider,
+    twoThirdsSplit: SbTwoThirdsSplit
   },
   apiOptions: {
     region: 'us'

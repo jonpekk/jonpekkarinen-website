@@ -88,19 +88,19 @@ p {
 
 @layer utilities {
   .h1-style {
-    @apply text-4xl lg:text-6xl font-extralight tracking-wide;
+    @apply text-5xl lg:text-6xl font-extralight tracking-wide;
   }
 
   .h2-style {
-    @apply text-3xl lg:text-5xl font-light tracking-wide;
+    @apply text-4xl lg:text-5xl font-light tracking-wide;
   }
 
   .h3-style {
-    @apply text-2xl lg:text-4xl font-light tracking-wide;
+    @apply text-3xl lg:text-4xl font-light tracking-wide;
   }
 
   .h4-style {
-    @apply text-lg lg:text-3xl font-light tracking-wide;
+    @apply text-2xl lg:text-3xl font-light tracking-wide;
   }
 
   .h5-style {

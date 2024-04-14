@@ -1,6 +1,28 @@
 {
   "components": [
     {
+      "name": "divider",
+      "display_name": null,
+      "created_at": "2024-04-14T20:35:33.355Z",
+      "updated_at": "2024-04-14T20:35:33.355Z",
+      "id": 155433,
+      "schema": {},
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "divider",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
       "name": "grid",
       "display_name": null,
       "created_at": "2024-04-06T15:50:29.980Z",
@@ -92,12 +114,13 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "image",
-      "component_group_uuid": null,
+      "component_group_uuid": "8fd4a9d7-cd21-4bc9-bd24-3912c50bbede",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
       "internal_tag_ids": [],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "component_group_name": "Components"
     },
     {
       "name": "page",
@@ -206,6 +229,43 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "richText",
+      "component_group_uuid": "8fd4a9d7-cd21-4bc9-bd24-3912c50bbede",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Components"
+    },
+    {
+      "name": "twoThirdsSplit",
+      "display_name": null,
+      "created_at": "2024-04-14T21:09:11.459Z",
+      "updated_at": "2024-04-14T21:10:22.257Z",
+      "id": 155434,
+      "schema": {
+        "columns": {
+          "type": "bloks",
+          "required": true,
+          "key": "columns",
+          "pos": 0,
+          "minimum": 2,
+          "maximum": 2
+        },
+        "wideOnLeft": {
+          "type": "boolean",
+          "key": "wideOnRight",
+          "pos": 1
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "twoThirdsSplit",
       "component_group_uuid": null,
       "color": null,
       "icon": null,
