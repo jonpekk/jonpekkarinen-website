@@ -8,6 +8,7 @@ import { StoryblokPageTitle } from './components/PageTitle/PageTitle'
 import StoryblokRichText from './components/StoryblokRichText/StoryblokRichText'
 import SbImage from './components/Image/SbImage'
 import SbGrid from './components/Grid/SbGrid'
+import Divider from './components/Divider/Divider'
 
 
 // Create a new router instance
@@ -28,7 +29,8 @@ storyblokInit({
     pageTitle: StoryblokPageTitle,
     richText: StoryblokRichText,
     image: SbImage,
-    grid: SbGrid
+    grid: SbGrid,
+    divider: Divider
   },
   apiOptions: {
     region: 'us'
