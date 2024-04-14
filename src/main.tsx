@@ -4,8 +4,10 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 import './output.css'
 import { routeTree } from './routeTree.gen'
 import { storyblokInit, apiPlugin } from '@storyblok/react'
-import SplitComponent from './components/SplitComponent/SplitComponent'
 import { StoryblokPageTitle } from './components/PageTitle/PageTitle'
+import StoryblokRichText from './components/StoryblokRichText/StoryblokRichText'
+import SbImage from './components/Image/SbImage'
+import SbGrid from './components/Grid/SbGrid'
 
 
 // Create a new router instance
@@ -23,8 +25,10 @@ storyblokInit({
   accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
-    splitComponent: SplitComponent,
-    pageTitle: StoryblokPageTitle
+    pageTitle: StoryblokPageTitle,
+    richText: StoryblokRichText,
+    image: SbImage,
+    grid: SbGrid
   },
   apiOptions: {
     region: 'us'

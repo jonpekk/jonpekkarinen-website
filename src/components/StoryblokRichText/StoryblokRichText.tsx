@@ -1,16 +1,16 @@
 import { render, MARK_BOLD, MARK_LINK, NODE_OL, NODE_UL, NODE_LI } from 'storyblok-rich-text-react-renderer';
-import { RichtextStoryblok } from '@/component-types-sb';
+import { RichTextStoryblok } from '@/component-types-sb';
 import Link from '../Link/Link';
 
 type TRichTextProps = {
-  document: RichtextStoryblok
+  blok: RichTextStoryblok
 }
-function StoryblokRichText({ document }: TRichTextProps) {
+function StoryblokRichText({ blok }: TRichTextProps) {
   // document is the rich text object you receive from Storyblok,
   // in the form { type: "doc", content: [ ... ] }
   return (
     <div className="font-extralight text-2xl">
-      {render(document, {
+      {render(blok.doc, {
         markResolvers: {
           [MARK_BOLD]: (children) => <strong className="font-medium">{children}</strong>,
           [MARK_LINK]: (children, { href, linktype }) => <Link href={href as string} isExternal={linktype === 'url'}>{children}</Link>

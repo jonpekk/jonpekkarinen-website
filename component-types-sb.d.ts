@@ -1,15 +1,53 @@
-/* eslint-disable */
-import { StoryblokStory } from 'storyblok-generate-ts'
+import {StoryblokStory} from 'storyblok-generate-ts'
 
 export interface GridStoryblok {
-  columns?: (GridStoryblok | PageStoryblok | PageTitleStoryblok | SplitComponentStoryblok)[];
+  columns?: (
+    | GridStoryblok
+    | ImageStoryblok
+    | PageStoryblok
+    | PageTitleStoryblok
+    | RichTextStoryblok
+    | SplitComponentStoryblok
+  )[];
   _uid: string;
   component: "grid";
   [k: string]: any;
 }
 
+export interface AssetStoryblok {
+  _uid?: string;
+  id: number;
+  alt?: string;
+  name: string;
+  focus?: string;
+  source?: string;
+  title?: string;
+  filename: string;
+  copyright?: string;
+  fieldtype?: string;
+  meta_data?: null | {
+    [k: string]: any;
+  };
+  is_external_url?: boolean;
+  [k: string]: any;
+}
+
+export interface ImageStoryblok {
+  asset: AssetStoryblok;
+  _uid: string;
+  component: "image";
+  [k: string]: any;
+}
+
 export interface PageStoryblok {
-  body?: (GridStoryblok | PageStoryblok | PageTitleStoryblok | SplitComponentStoryblok)[];
+  body?: (
+    | GridStoryblok
+    | ImageStoryblok
+    | PageStoryblok
+    | PageTitleStoryblok
+    | RichTextStoryblok
+    | SplitComponentStoryblok
+  )[];
   _uid: string;
   component: "page";
   uuid?: string;
@@ -32,21 +70,10 @@ export interface RichtextStoryblok {
   [k: string]: any;
 }
 
-export interface AssetStoryblok {
-  _uid?: string;
-  id: number;
-  alt?: string;
-  name: string;
-  focus?: string;
-  source?: string;
-  title?: string;
-  filename: string;
-  copyright?: string;
-  fieldtype?: string;
-  meta_data?: null | {
-    [k: string]: any;
-  };
-  is_external_url?: boolean;
+export interface RichTextStoryblok {
+  doc: RichtextStoryblok;
+  _uid: string;
+  component: "richText";
   [k: string]: any;
 }
 
