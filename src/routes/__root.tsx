@@ -5,7 +5,9 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <Navigation />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </>
   ),
 })

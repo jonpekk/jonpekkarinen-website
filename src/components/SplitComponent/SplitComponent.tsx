@@ -1,5 +1,6 @@
 import { SplitComponentStoryblok } from "@/component-types-sb"
-import { storyblokEditable } from "@storyblok/react"
+import StoryblokRichText from "../StoryblokRichText/StoryblokRichText"
+
 
 type TSplitComponentProps = {
   blok: SplitComponentStoryblok
@@ -7,9 +8,17 @@ type TSplitComponentProps = {
 
 function SplitComponent({ blok }: TSplitComponentProps) {
   return (
-    <div {...storyblokEditable(blok)}>
-      <p>{blok.leftContent}</p>
-      <p>{blok.rightContent}</p>
+    <div className="flex flex-col gap-4 md:flex-row">
+      <StoryblokRichText
+        document={blok.splitComponentText}
+      />
+      <div className={`${blok.imageOnLeft ? "md:order-first" : ""}`}>
+        <img
+          src={blok.splitComponentImage.filename}
+          alt={blok.splitComponentImage.alt || ""}
+          className="w-full h-full object-contain rounded"
+        />
+      </div>
     </div>
   )
 }

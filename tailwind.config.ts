@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+// Colors for later - https://tailwindcss.com/docs/customizing-colors
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -26,7 +27,9 @@ export default {
     'h3-style',
     'h4-style',
     'h5-style',
-    'h6-style'
+    'h6-style',
+    'grid',
+    'grid-cols-2'
 
   ],
 } satisfies Config;
