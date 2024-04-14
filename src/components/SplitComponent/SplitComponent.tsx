@@ -8,7 +8,7 @@ type TSplitComponentProps = {
 
 function SplitComponent({ blok }: TSplitComponentProps) {
   return (
-    <div className="flex flex-col gap-4 md:flex-row">
+    <div className="grid gap-4 md:grid-cols-2">
       <StoryblokRichText
         document={blok.splitComponentText}
       />
