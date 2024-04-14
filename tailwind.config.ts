@@ -28,8 +28,5 @@ export default {
     'h4-style',
     'h5-style',
     'h6-style',
-    'grid',
-    'grid-cols-2'
-
   ],
 } satisfies Config;
