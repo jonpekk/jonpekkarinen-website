@@ -75,32 +75,32 @@
 }
 
 html {
-  @apply font-outfit
+  @apply font-outfit font-light bg-stone-200;
 }
 
 
 @layer utilities {
   .h1-style {
-    @apply text-3xl lg:text-4xl font-bold tracking-wide;
+    @apply text-3xl lg:text-4xl font-extralight tracking-wide;
   }
 
   .h2-style {
-    @apply text-2xl lg:text-3xl font-semibold tracking-wide;
+    @apply text-2xl lg:text-3xl font-light tracking-wide;
   }
 
   .h3-style {
-    @apply text-xl lg:text-2xl font-semibold tracking-wide;
+    @apply text-xl lg:text-2xl font-light tracking-wide;
   }
 
   .h4-style {
-    @apply text-lg lg:text-xl font-semibold tracking-wide;
+    @apply text-lg lg:text-xl font-light tracking-wide;
   }
 
   .h5-style {
-    @apply text-base lg:text-lg font-semibold tracking-wide;
+    @apply text-base lg:text-lg font-light tracking-wide;
   }
 
   .h6-style {
-    @apply text-sm lg:text-base font-semibold tracking-wide;
+    @apply text-sm lg:text-base font-normal tracking-wide;
   }
 }
