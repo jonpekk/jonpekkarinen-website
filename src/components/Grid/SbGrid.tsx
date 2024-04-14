@@ -7,12 +7,12 @@ type TGridProps = {
 
 function SbGrid({ blok }: TGridProps) {
   const cols = blok.columns?.length || 1
-  let classNames = `grid gap-12 md:grid-cols-${cols} md:gap-${12 / cols} ${blok.align || "items-start"}`
+  const classNames = `grid gap-12 md:grid-cols-${cols} md:gap-${12 / cols} ${blok.align || "items-start"}`
 
   return blok.columns && (
     <div className={classNames}>
       {blok.columns.map(b => (
-        <StoryblokComponent blok={b} />
+        <StoryblokComponent blok={b} key={b._uid} />
       ))
       }
     </div>

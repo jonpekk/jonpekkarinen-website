@@ -1,7 +1,22 @@
-import {StoryblokStory} from 'storyblok-generate-ts'
+/* eslint-disable */
+import { StoryblokStory } from 'storyblok-generate-ts'
+
+export interface DividerStoryblok {
+  _uid: string;
+  component: "divider";
+  [k: string]: any;
+}
 
 export interface GridStoryblok {
-  columns?: (GridStoryblok | ImageStoryblok | PageStoryblok | PageTitleStoryblok | RichTextStoryblok)[];
+  columns?: (
+    | DividerStoryblok
+    | GridStoryblok
+    | ImageStoryblok
+    | PageStoryblok
+    | PageTitleStoryblok
+    | RichTextStoryblok
+    | TwoThirdsSplitStoryblok
+  )[];
   align?: "" | "items-start" | "items-end" | "items-center" | "items-baseline" | "items-stretch";
   _uid: string;
   component: "grid";
@@ -34,7 +49,15 @@ export interface ImageStoryblok {
 }
 
 export interface PageStoryblok {
-  body?: (GridStoryblok | ImageStoryblok | PageStoryblok | PageTitleStoryblok | RichTextStoryblok)[];
+  body?: (
+    | DividerStoryblok
+    | GridStoryblok
+    | ImageStoryblok
+    | PageStoryblok
+    | PageTitleStoryblok
+    | RichTextStoryblok
+    | TwoThirdsSplitStoryblok
+  )[];
   _uid: string;
   component: "page";
   uuid?: string;
@@ -61,5 +84,21 @@ export interface RichTextStoryblok {
   doc: RichtextStoryblok;
   _uid: string;
   component: "richText";
+  [k: string]: any;
+}
+
+export interface TwoThirdsSplitStoryblok {
+  columns: (
+    | DividerStoryblok
+    | GridStoryblok
+    | ImageStoryblok
+    | PageStoryblok
+    | PageTitleStoryblok
+    | RichTextStoryblok
+    | TwoThirdsSplitStoryblok
+  )[];
+  wideOnLeft?: boolean;
+  _uid: string;
+  component: "twoThirdsSplit";
   [k: string]: any;
 }

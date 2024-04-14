@@ -12,12 +12,12 @@ function StoryblokRichText({ blok }: TRichTextProps) {
     <div className="font-extralight text-2xl">
       {render(blok.doc, {
         markResolvers: {
-          [MARK_BOLD]: (children) => <strong className="font-medium">{children}</strong>,
+          [MARK_BOLD]: (children) => <strong className="font-regular">{children}</strong>,
           [MARK_LINK]: (children, { href, linktype }) => <Link href={href as string} isExternal={linktype === 'url'}>{children}</Link>
         },
         nodeResolvers: {
-          [NODE_OL]: (children) => <ol className="list-decimal pl-8 py-4">{children}</ol>,
-          [NODE_UL]: (children) => <ul className="list-disc pl-8 py-4">{children}</ul>,
+          [NODE_OL]: (children) => <ol className="list-decimal pl-8 pb-4">{children}</ol>,
+          [NODE_UL]: (children) => <ul className="list-disc pl-8 pb-4">{children}</ul>,
           [NODE_LI]: (children) => <li className="py-1">{children}</li>
         }
       })}
