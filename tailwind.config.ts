@@ -28,5 +28,9 @@ export default {
     'h4-style',
     'h5-style',
     'h6-style',
+    'items-end',
+    'items-center',
+    'items-baseline',
+    'items-stretch'
   ],
 } satisfies Config;

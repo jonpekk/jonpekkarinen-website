@@ -1,27 +1,4 @@
-/* eslint-disable */
-import { StoryblokStory } from 'storyblok-generate-ts'
-
-export interface DividerStoryblok {
-  _uid: string;
-  component: "divider";
-  [k: string]: any;
-}
-
-export interface GridStoryblok {
-  columns?: (
-    | DividerStoryblok
-    | GridStoryblok
-    | ImageStoryblok
-    | PageStoryblok
-    | PageTitleStoryblok
-    | RichTextStoryblok
-    | TwoThirdsSplitStoryblok
-  )[];
-  align?: "" | "items-start" | "items-end" | "items-center" | "items-baseline" | "items-stretch";
-  _uid: string;
-  component: "grid";
-  [k: string]: any;
-}
+import {StoryblokStory} from 'storyblok-generate-ts'
 
 export interface AssetStoryblok {
   _uid?: string;
@@ -41,6 +18,57 @@ export interface AssetStoryblok {
   [k: string]: any;
 }
 
+export interface BlogStoryblok {
+  body: (
+    | BlogStoryblok
+    | BlogIndexStoryblok
+    | DividerStoryblok
+    | GridStoryblok
+    | ImageStoryblok
+    | PageStoryblok
+    | PageTitleStoryblok
+    | RichTextStoryblok
+    | TwoThirdsSplitStoryblok
+  )[];
+  featuredImage?: AssetStoryblok;
+  introText?: string;
+  _uid: string;
+  component: "Blog";
+  [k: string]: any;
+}
+
+export interface BlogIndexStoryblok {
+  pageTitle: string;
+  featuredBlog: StoryblokStory<BlogStoryblok> | string;
+  _uid: string;
+  component: "blogIndex";
+  [k: string]: any;
+}
+
+export interface DividerStoryblok {
+  _uid: string;
+  component: "divider";
+  [k: string]: any;
+}
+
+export interface GridStoryblok {
+  columns?: (
+    | BlogStoryblok
+    | BlogIndexStoryblok
+    | DividerStoryblok
+    | GridStoryblok
+    | ImageStoryblok
+    | PageStoryblok
+    | PageTitleStoryblok
+    | RichTextStoryblok
+    | TwoThirdsSplitStoryblok
+  )[];
+  align?: "" | "items-start" | "items-end" | "items-center" | "items-baseline" | "items-stretch";
+  _uid: string;
+  component: "grid";
+  [k: string]: any;
+}
+
 export interface ImageStoryblok {
   asset: AssetStoryblok;
   _uid: string;
@@ -50,6 +78,8 @@ export interface ImageStoryblok {
 
 export interface PageStoryblok {
   body?: (
+    | BlogStoryblok
+    | BlogIndexStoryblok
     | DividerStoryblok
     | GridStoryblok
     | ImageStoryblok
@@ -89,6 +119,8 @@ export interface RichTextStoryblok {
 
 export interface TwoThirdsSplitStoryblok {
   columns: (
+    | BlogStoryblok
+    | BlogIndexStoryblok
     | DividerStoryblok
     | GridStoryblok
     | ImageStoryblok

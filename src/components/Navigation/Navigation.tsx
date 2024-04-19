@@ -30,7 +30,7 @@ function Navigation() {
           className="absolute left-0 right-0 hidden peer-has-[:checked]:flex border border-t-stone-500 md:border-t-0 shadow-b-2xl md:shadow-none rounded-b md:rounded-0 flex-col gap-4 px-4 py-6 md:py-0 bg-stone-200 md:flex md:flex-row md:justify-evenly md:gap-10 md:peer-has-[:checked]:flex md:relative"
         >
           <li><Link href="#" linkColor="text-black">Work</Link></li>
-          <li><Link href="#" linkColor="text-black">Blog</Link></li>
+          <li><Link href="/blog" linkColor="text-black">Blog</Link></li>
           <li><Link href="/about" linkColor="text-black">About Me</Link></li>
         </ul>
       </nav>
