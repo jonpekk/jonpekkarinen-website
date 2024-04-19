@@ -1,6 +1,98 @@
 {
   "components": [
     {
+      "name": "Blog",
+      "display_name": null,
+      "created_at": "2024-04-17T12:26:04.022Z",
+      "updated_at": "2024-04-17T23:20:36.487Z",
+      "id": 156052,
+      "schema": {
+        "body": {
+          "type": "bloks",
+          "pos": 0,
+          "required": true,
+          "key": "Body"
+        },
+        "featuredImage": {
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "key": "featuredImage",
+          "pos": 1
+        },
+        "tab-0894d02d-be0f-4121-acbf-e510107d4f2b": {
+          "display_name": "metaData",
+          "keys": [
+            "introText",
+            "featuredImage"
+          ],
+          "pos": 2,
+          "type": "tab",
+          "key": "tab-0894d02d-be0f-4121-acbf-e510107d4f2b"
+        },
+        "introText": {
+          "type": "textarea",
+          "pos": 3,
+          "required": false,
+          "key": "introText"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Blog",
+      "component_group_uuid": "37b8f153-30f9-498b-8e9f-32b86df6c1fd",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "PageTemplates"
+    },
+    {
+      "name": "blogIndex",
+      "display_name": null,
+      "created_at": "2024-04-17T12:34:43.172Z",
+      "updated_at": "2024-04-17T12:37:58.470Z",
+      "id": 156056,
+      "schema": {
+        "pageTitle": {
+          "type": "text",
+          "pos": 0,
+          "required": true
+        },
+        "featuredBlog": {
+          "type": "option",
+          "use_uuid": true,
+          "required": true,
+          "source": "internal_stories",
+          "filter_content_type": [
+            "Blog"
+          ],
+          "pos": 1
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "blogIndex",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
       "name": "divider",
       "display_name": null,
       "created_at": "2024-04-14T20:35:33.355Z",
@@ -15,12 +107,13 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "divider",
-      "component_group_uuid": null,
+      "component_group_uuid": "8fd4a9d7-cd21-4bc9-bd24-3912c50bbede",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
       "internal_tag_ids": [],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "component_group_name": "Components"
     },
     {
       "name": "grid",
