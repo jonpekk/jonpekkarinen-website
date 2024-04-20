@@ -19,7 +19,8 @@
     "local-ssl-proxy": "^2.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storyblok-rich-text-react-renderer": "^2.9.2"
+    "storyblok-rich-text-react-renderer": "^2.9.2",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
     "@tanstack/router-vite-plugin": "^1.25.0",
