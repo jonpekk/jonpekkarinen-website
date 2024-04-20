@@ -19,6 +19,7 @@ export interface AssetStoryblok {
 }
 
 export interface BlogStoryblok {
+  title: string;
   body: (
     | BlogStoryblok
     | BlogIndexStoryblok
@@ -33,7 +34,7 @@ export interface BlogStoryblok {
   featuredImage?: AssetStoryblok;
   introText?: string;
   _uid: string;
-  component: "Blog";
+  component: "blog";
   [k: string]: any;
 }
 

@@ -1,7 +1,8 @@
 import { createFileRoute, notFound } from '@tanstack/react-router'
 import { getStoryblokApi, StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
-import MetaHead from './../../components/MetaHead'
+import MetaHead from '@/src/components/MetaHead'
 import { BlogStoryblok } from '@/component-types-sb';
+import PageTitle from '@/src/components/PageTitle/PageTitle';
 
 async function getBlogPost(id: string) {
   try {
@@ -35,12 +36,17 @@ function BlogPage() {
       title={blogPost.data.story.name}
       description={blogPostContent?.introText || "Jon Pekkarinen - Blog"}
     >
-      {blogPostContent.body.map(blok => (
-        <div key={blok._uid} className="pb-6 md:pb-12 lg:pb-16" {...storyblokEditable(blok)}>
+      <div className="pb-6 md:pb-12 lg:pb-16">
+        <PageTitle text={blogPostContent.title} />
+      </div>
+      <>
+        {blogPostContent.body.map(blok => (
+          <div key={blok._uid} className="pb-6 md:pb-12 lg:pb-16" {...storyblokEditable(blok)}>
 
-          <StoryblokComponent blok={blok} />
-        </div>
-      ))}
+            <StoryblokComponent blok={blok} />
+          </div>
+        ))}
+      </>
     </MetaHead>
   )
 }
