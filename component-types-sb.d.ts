@@ -1,4 +1,5 @@
-import {StoryblokStory} from 'storyblok-generate-ts'
+/* eslint-disable */
+import { StoryblokStory } from 'storyblok-generate-ts'
 
 export interface AssetStoryblok {
   _uid?: string;

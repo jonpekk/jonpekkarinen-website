@@ -36,7 +36,7 @@ function BlogPage() {
       title={blogPost.data.story.name}
       description={blogPostContent?.introText || "Jon Pekkarinen - Blog"}
     >
-      <div className="pb-6 md:pb-12 lg:pb-16 pt-20 md:pt-48">
+      <div className="pb-6 md:pb-12 lg:pb-16 pt-20 md:pt-36">
         <PageTitle text={blogPostContent.title} />
       </div>
       <>
