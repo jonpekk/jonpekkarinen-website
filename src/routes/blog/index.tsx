@@ -6,6 +6,8 @@ import Link from '@/src/components/Link/Link';
 import Heading from '@/src/components/Heading/Heading';
 import PageTitle from '@/src/components/PageTitle/PageTitle';
 import { StoryblokStory } from 'storyblok-generate-ts'
+import Divider from '@/src/components/Divider/Divider';
+import { formatDate } from '@/src/utils/timeDate';
 
 async function getBlogIndex() {
   try {
@@ -49,10 +51,24 @@ function BlogIndex() {
       title={blogPageData.pageTitle}
       description={`${blogPageData.pageTitle} - Jon Pekkarinen`}
     >
-      <PageTitle text={blogPageData.pageTitle} />
-      <div className='py-10'>
-        <Heading tag='h2' style='h4'>Featured Content</Heading>
-        <p>{featuredBlogContent.title}</p>
+      <div className='pt-20 md:pt-48'>
+        <PageTitle text={blogPageData.pageTitle} />
+      </div>
+      <div className='py-20'>
+        <Divider />
+        <div className='grid md:grid-cols-2 gap-10 items-end py-20'>
+          <div className='flex flex-col gap-8 py-6 '>
+            <Link href={featuredBlog.slug} linkColor='text-black' style="title"><Heading tag='h2' style='h3'>{featuredBlogContent.title}</Heading></Link>
+            {featuredBlog.published_at && <p className='h6-style'>{formatDate(featuredBlog.published_at)}</p>}
+            <p className='text-xl md:text-2xl'>{featuredBlogContent.introText}</p>
+          </div>
+          <img
+            alt=''
+            src={featuredBlogContent.featuredImage?.filename}
+            className="w-full object-contain rounded"
+          />
+        </div>
+        <Divider />
       </div>
       <div className='grid md:grid-cols-3 gap-6 md:gap-0'>
         <div className='md:col-span-1'>
@@ -60,9 +76,9 @@ function BlogIndex() {
         </div>
         <ul className='col-span-2'>
           {blogs.data.stories.map((blog: ISbStoryData) => (
-            <li key={blog.content._uid} className='pb-14'>
+            <li key={blog.content._uid} className='pb-14 flex flex-col gap-2'>
               <Link href={blog.slug} linkColor='text-black' style="title"><Heading tag='h3' style='h3'>{blog.content.title}</Heading></Link>
-              {blog.published_at && <p>{blog.published_at}</p>}
+              {blog.published_at && <p>{formatDate(blog.published_at)}</p>}
               <p className='leading-normal'>{blog.content.introText}</p>
             </li>
           ))}
