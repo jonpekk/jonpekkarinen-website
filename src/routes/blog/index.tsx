@@ -48,10 +48,10 @@ function BlogIndex() {
 
   return (
     <MetaHead
-      title={blogPageData.pageTitle}
+      title={`${blogPageData.pageTitle} - Jon Pekkarinen`}
       description={`${blogPageData.pageTitle} - Jon Pekkarinen`}
     >
-      <div className='pt-20 md:pt-48'>
+      <div className='pt-20 md:pt-36'>
         <PageTitle text={blogPageData.pageTitle} />
       </div>
       <div className='py-20'>
