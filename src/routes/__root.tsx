@@ -4,6 +4,7 @@ import {
   Outlet,
   createRootRouteWithContext,
 } from '@tanstack/react-router'
+import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import { DehydrateRouter } from '@tanstack/react-router-server/client'
 import Navigation from '../components/Navigation/Navigation'
 import '@/src/output.css'
@@ -65,7 +66,7 @@ function RootComponent() {
         <main>
           <Outlet />
         </main>
-        {/* <TanStackRouterDevtools position="bottom-right" /> */}
+        <TanStackRouterDevtools position="bottom-right" />
         <DehydrateRouter />
       </body>
     </html>
